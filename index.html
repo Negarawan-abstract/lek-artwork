@@ -124,14 +124,29 @@
             height: auto;
         }
 
-        /* 4. SECTION LABEL */
+        /* 4. SECTION TITLE & SUBTITLE */
+        .section-header {
+            border-bottom: 2px solid var(--text-color);
+            padding-bottom: 10px;
+            margin-bottom: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
         .section-title {
             font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border-bottom: 2px solid var(--text-color);
-            padding-bottom: 10px;
-            margin-bottom: 60px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .section-subtitle {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-red);
             font-weight: bold;
         }
 
@@ -172,7 +187,7 @@
             transform: scale(1.02);
         }
 
-        /* Hover Badge Indicator [ CLICK TO VIEW ] */
+        /* Hover Badge Indicator khusus Laptop/Desktop */
         .work-image::after {
             content: "[ CLICK TO VIEW ]";
             position: absolute;
@@ -357,7 +372,6 @@
             z-index: 10;
         }
 
-        /* Tombol close khusus modal gambar (warna putih) */
         .image-modal-container .close-btn {
             color: #ffffff;
             top: -45px;
@@ -374,6 +388,11 @@
                 grid-template-columns: 1fr;
             }
             .hero-text h1 { font-size: 12vw; }
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
             .work-item, .work-item:nth-child(even) {
                 display: flex;
                 flex-direction: column;
@@ -422,7 +441,10 @@
 
         <!-- WORKS SECTION -->
         <section id="works">
-            <h2 class="section-title">// SELECTED WORKS</h2>
+            <div class="section-header">
+                <h2 class="section-title">// SELECTED WORKS</h2>
+                <span class="section-subtitle">* TAP/CLICK IMAGE TO VIEW DETAIL</span>
+            </div>
             <div class="work-list">
                 
                 <!-- Karya 1 -->
